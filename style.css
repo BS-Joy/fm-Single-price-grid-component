@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background-color: var(--LightGray);
+}
+
+.container {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px rgba(109, 131, 175, 0.2);
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+}
+
+.card {
+    padding: 35px;
+}
+
+.community {
+    grid-column: auto / span 2;
+    background-color: white;
+    padding-right: 100px;
+}
+
+.community h1 {
+    color: var(--Cyan);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.money-back {
+    color: var(--BrightYellow);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.community-desc {
+    color: var(--GrayishBlue);
+    line-height: 25px;
+}
+
+.subscription {
+    width: 50%;
+    background-color: var(--Cyan);
+    color:white;
+}
+
+.monthly-sub {
+    font-size: 1.2rem;
+}
+
+.price {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.price h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.month {
+    font-size: 1rem;
+    color: hsla(204, 43%, 93%, 0.8);
+}
+
+.access {
+    color: var(--LightGray);
+    margin-bottom: 20px;
+}
+
+.signup {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 0;
+    font-size: 1.1rem;
+    color: white;
+    background-color: var(--BrightYellow);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.why-us {
+    width: 50%;
+    background-color: hsla(179, 47%, 52%, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.why-us h3 {
+    color: white;
+}
+
+.why-us ul {
+    color: var(--LightGray);
+    list-style: none;
+    line-height: 1.45;
+    font-size: 0.9rem;
+
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        width: 85vw;
+        margin-top: 90px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscription,
+    .why-us {
+        width: 100%;
+    }
+
+    .community {
+        padding-right: 22px;
+    }
+
+    .community h1 {
+        font-size: 1.3rem;
+    }
+
+    .money-back {
+        font-size: 0.9rem;
+    }
+
+    .community-desc {
+        font-size: 0.9rem;
+    }
+
+    .monthly-sub {
+        font-size: 1.1rem;
+    }
+
+    .access {
+        margin-bottom: 30px;
+    }
+}
